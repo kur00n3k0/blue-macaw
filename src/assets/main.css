@@ -1,0 +1,78 @@
+@import './base.css';
+
+/* Japanese: Latin text keeps Instrument Sans, kana and kanji fall through to Noto Sans JP
+   (loaded on demand by src/i18n). Line breaks follow Japanese rules. Headings break
+   between phrases where the browser supports it (falling back to any character when a
+   phrase is wider than the screen), and drop the tight Latin tracking and leading,
+   which crowd kanji. `:root:lang(ja)` outranks the components' scoped heading styles. */
+:root:lang(ja) {
+  --font-sans: var(--font-sans-ja);
+  line-break: strict;
+}
+
+:root:lang(ja) :is(h1, h2, h3) {
+  word-break: auto-phrase;
+  overflow-wrap: anywhere;
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+
+:root:lang(ja) h1 {
+  font-size: clamp(32px, 5vw, 64px);
+  max-width: 13em;
+}
+
+/* Page-width container shared by every section */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.text-muted {
+  color: var(--color-muted-foreground);
+}
+
+/* Quiet inline link: muted until hovered */
+.text-link {
+  color: var(--color-muted-foreground);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.text-link:hover {
+  color: var(--color-foreground);
+}
+
+/* Small rounded label ("Project", "Monthly contract"…) */
+.tag {
+  align-self: flex-start;
+  padding: 2px 8px;
+  border-radius: var(--radius-md);
+  background: var(--color-secondary);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.caption {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-muted-foreground);
+}
+
+/* Scroll reveal, driven by the v-reveal directive (src/directives/reveal.ts).
+   The directive only adds data-reveal when the animation can run, so content
+   is never left hidden. */
+[data-reveal] {
+  opacity: 0;
+  translate: 0 28px;
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0, 0, 1) var(--reveal-delay, 0ms),
+    translate 0.8s cubic-bezier(0.2, 0, 0, 1) var(--reveal-delay, 0ms);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  translate: 0 0;
+}

@@ -1,0 +1,3319 @@
+<!doctype html> <meta charset="utf-8" /><style data-dc-design-system-vars>
+  @layer {
+    :root {
+      --background: #0a0a0a;
+      --foreground: #fafafa;
+      --card: #0a0a0a;
+      --card-foreground: #fafafa;
+      --popover: #0a0a0a;
+      --popover-foreground: #fafafa;
+      --primary: #fafafa;
+      --primary-foreground: #171717;
+      --secondary: #262626;
+      --secondary-foreground: #fafafa;
+      --muted: #262626;
+      --muted-foreground: #a1a1a1;
+      --accent: #262626;
+      --accent-foreground: #fafafa;
+      --destructive: #82181a;
+      --destructive-foreground: #fb2c36;
+      --on-destructive: #ffffff;
+      --border: #262626;
+      --input: #262626;
+      --ring: #525252;
+      --chart-1: #1447e6;
+      --chart-2: #00bc7d;
+      --chart-3: #fe9a00;
+      --chart-4: #ad46ff;
+      --chart-5: #ff2056;
+      --sidebar: #171717;
+      --sidebar-foreground: #fafafa;
+      --sidebar-primary: #fafafa;
+      --sidebar-primary-foreground: #fafafa;
+      --sidebar-accent: #262626;
+      --sidebar-accent-foreground: #fafafa;
+      --sidebar-border: #262626;
+      --sidebar-ring: #525252;
+      --income: #34d399;
+      --spending: #fb7185;
+      --net: #e2e8f0;
+      --income-fill: #34d3994d;
+      --spending-fill: #fb71854d;
+      --wave: #82b4ff;
+      --glow: #ffffff;
+      --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-glass:
+        6px 14px 34px -14px rgba(0, 0, 0, 0.65), 0 3px 8px -3px rgba(0, 0, 0, 0.4),
+        inset -1px 1px 0 rgba(255, 255, 255, 0.22), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+      --shadow-float: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-6: 24px;
+      --space-8: 32px;
+      --space-12: 48px;
+      --radius-sm: 6px;
+      --radius-md: 8px;
+      --radius-lg: 10px;
+      --radius-xl: 12px;
+      --radius-full: 9999px;
+      --glass-blur: 14px;
+      --glass-tint: 52%;
+      --glass-saturate: 1.6;
+      --glass-ior: 1.5;
+      --glass-dispersion: 0.08;
+      --grid-pitch: 22px;
+      --grid-opacity: 9%;
+      --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+      --text-figure-xl: 600 30px/36px var(--font-sans);
+      --text-figure: 600 24px/32px var(--font-sans);
+      --text-heading: 600 20px/28px var(--font-sans);
+      --text-card-title: 600 16px/16px var(--font-sans);
+      --text-body: 400 14px/20px var(--font-sans);
+      --text-label: 500 14px/14px var(--font-sans);
+      --text-caption: 400 12px/16px var(--font-sans);
+    }
+  }
+</style>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Blue Macaw Cybersecurity</title>
+    <script src="./vendor/react.js"></script>
+    <script src="./vendor/react-dom.js"></script>
+    <script src="./support.js"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;display=swap"
+        />
+        <style>
+          body {
+            margin: 0;
+            background: oklch(0.145 0 0);
+          }
+          a {
+            color: oklch(0.985 0 0);
+          }
+          a:hover {
+            color: oklch(0.985 0 0);
+          }
+          .glass {
+            background: color-mix(in oklch, oklch(0.145 0 0) 52%, transparent);
+            -webkit-backdrop-filter: blur(14px) saturate(1.6);
+            backdrop-filter: blur(14px) saturate(1.6);
+            border: 1px solid color-mix(in oklch, oklch(0.269 0 0) 80%, transparent);
+            border-radius: 12px;
+            box-shadow:
+              6px 14px 34px -14px rgba(0, 0, 0, 0.65),
+              0 3px 8px -3px rgba(0, 0, 0, 0.4),
+              inset -1px 1px 0 rgba(255, 255, 255, 0.22),
+              inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+          }
+          .bm-ghost:hover {
+            background: oklch(0.269 0 0);
+            color: oklch(0.985 0 0);
+          }
+          .bm-outline:hover {
+            background: oklch(0.269 0 0);
+          }
+          .bm-primary:hover {
+            background: oklch(0.9 0 0);
+            color: oklch(0.205 0 0);
+          }
+          .bm-link {
+            color: oklch(0.708 0 0);
+            text-decoration: none;
+            transition: color 0.15s ease;
+          }
+          .bm-link:hover {
+            color: oklch(0.985 0 0);
+          }
+          a:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px color-mix(in oklch, oklch(0.439 0 0) 50%, transparent);
+          }
+          .bm-acc summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 0;
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 500;
+            color: oklch(0.985 0 0);
+          }
+          .bm-acc summary::-webkit-details-marker {
+            display: none;
+          }
+          .bm-acc summary:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px color-mix(in oklch, oklch(0.439 0 0) 50%, transparent);
+            border-radius: 6px;
+          }
+          .bm-acc .bm-plus {
+            flex: none;
+            color: oklch(0.708 0 0);
+            transition: transform 0.2s ease;
+          }
+          .bm-acc[open] .bm-plus {
+            transform: rotate(45deg);
+          }
+          .bm-p {
+            position: absolute;
+            border-radius: 9999px;
+            background: #ffffff;
+            box-shadow:
+              0 0 4px 1px rgba(255, 255, 255, 0.9),
+              0 0 12px 3px rgba(130, 180, 255, 0.55),
+              0 0 24px 6px rgba(130, 180, 255, 0.18);
+            opacity: 0.15;
+            animation-name: bm-rise-a, bm-sway-a, bm-twinkle;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate, alternate, normal;
+          }
+          .bm-p:nth-child(3n + 2) {
+            animation-name: bm-rise-b, bm-sway-b, bm-twinkle;
+          }
+          .bm-p:nth-child(3n) {
+            animation-name: bm-rise-c, bm-sway-c, bm-twinkle;
+          }
+          .bm-p:nth-child(4n + 1) {
+            animation-duration: 34s, 13s, 6s !important;
+          }
+          .bm-p:nth-child(4n + 2) {
+            animation-duration: 28s, 9s, 4.5s !important;
+          }
+          .bm-p:nth-child(4n + 3) {
+            animation-duration: 41s, 15s, 7s !important;
+          }
+          .bm-p:nth-child(4n) {
+            animation-duration: 23s, 11s, 5.5s !important;
+          }
+          .bm-p:nth-child(5n + 1) {
+            animation-delay:
+              -3s,
+              -7s,
+              -1s !important;
+          }
+          .bm-p:nth-child(5n + 2) {
+            animation-delay:
+              -17s,
+              -2s,
+              -3s !important;
+          }
+          .bm-p:nth-child(5n + 3) {
+            animation-delay:
+              -9s,
+              -11s,
+              -2s !important;
+          }
+          .bm-p:nth-child(5n + 4) {
+            animation-delay:
+              -25s,
+              -5s,
+              -4s !important;
+          }
+          .bm-p:nth-child(5n) {
+            animation-delay:
+              -13s,
+              -8s,
+              -0.5s !important;
+          }
+          @keyframes bm-rise-a {
+            0% {
+              translate: 0 0;
+            }
+            30% {
+              translate: 6px -22px;
+            }
+            55% {
+              translate: -5px -38px;
+            }
+            80% {
+              translate: 4px -61px;
+            }
+            100% {
+              translate: -2px -80px;
+            }
+          }
+          @keyframes bm-rise-b {
+            0% {
+              translate: 0 0;
+            }
+            25% {
+              translate: -8px -14px;
+            }
+            50% {
+              translate: 3px -35px;
+            }
+            75% {
+              translate: -6px -52px;
+            }
+            100% {
+              translate: 5px -70px;
+            }
+          }
+          @keyframes bm-rise-c {
+            0% {
+              translate: 0 0;
+            }
+            35% {
+              translate: 4px 18px;
+            }
+            60% {
+              translate: -7px 6px;
+            }
+            100% {
+              translate: 3px -40px;
+            }
+          }
+          @keyframes bm-sway-a {
+            0% {
+              transform: translateX(-10px);
+            }
+            100% {
+              transform: translateX(12px);
+            }
+          }
+          @keyframes bm-sway-b {
+            0% {
+              transform: translateX(14px);
+            }
+            50% {
+              transform: translateX(-6px);
+            }
+            100% {
+              transform: translateX(9px);
+            }
+          }
+          @keyframes bm-sway-c {
+            0% {
+              transform: translateX(-6px);
+            }
+            100% {
+              transform: translateX(18px);
+            }
+          }
+          @keyframes bm-twinkle {
+            0%,
+            100% {
+              opacity: 0.08;
+            }
+            50% {
+              opacity: 0.3;
+            }
+          }
+          .bm-wave {
+            animation: bm-flow 22s ease-in-out infinite alternate;
+          }
+          @keyframes bm-flow {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-80px);
+            }
+          }
+          .bm-blob {
+            animation: bm-blob 30s ease-in-out infinite alternate;
+          }
+          @keyframes bm-blob {
+            0% {
+              transform: translate(0, 0) scale(1);
+            }
+            50% {
+              transform: translate(40px, -30px) scale(1.08);
+            }
+            100% {
+              transform: translate(-30px, 20px) scale(0.95);
+            }
+          }
+          .bm-float {
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            z-index: 50;
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(-50%, -24px) scale(0.96);
+            transition:
+              opacity 0.25s ease,
+              transform 0.25s ease,
+              visibility 0s linear 0.25s;
+          }
+          .bm-float.is-on {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, 0) scale(1);
+            transition:
+              opacity 0.25s ease,
+              transform 0.25s ease,
+              visibility 0s;
+          }
+          @media (max-width: 640px) {
+            .bm-float-links {
+              display: none !important;
+            }
+            .bm-nav-links {
+              display: none !important;
+            }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .bm-p,
+            .bm-wave,
+            .bm-blob {
+              animation: none;
+            }
+            .bm-p {
+              animation-name: none !important;
+            }
+            .bm-float,
+            .bm-float.is-on {
+              transition: none;
+            }
+            .bm-acc .bm-plus {
+              transition: none;
+            }
+          }
+        </style>
+      </helmet>
+      <div
+        ref="{{rootRef}}"
+        style="
+          position: relative;
+          min-height: 100vh;
+          overflow: hidden;
+          background-color: oklch(0.145 0 0);
+          color: oklch(0.985 0 0);
+          font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+          font-size: 14px;
+          line-height: 20px;
+        "
+      >
+        <sc-for list="{{maps}}" as="m" hint-placeholder-count="0">
+          <svg
+            aria-hidden="true"
+            width="0"
+            height="0"
+            style="position: absolute; width: 0; height: 0; overflow: hidden"
+          >
+            <filter
+              id="{{m.id}}"
+              x="0"
+              y="0"
+              width="{{m.w}}"
+              height="{{m.h}}"
+              filterUnits="userSpaceOnUse"
+              primitiveUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood
+                flood-color="rgb(128,128,128)"
+                flood-opacity="1"
+                x="0"
+                y="0"
+                width="{{m.w}}"
+                height="{{m.h}}"
+                result="mn"
+              ></feFlood>
+              <feImage
+                href="./assets/1057ee8b882d919ae7c06942de318edf.png"
+                x="0"
+                y="0"
+                width="32"
+                height="32"
+                preserveAspectRatio="none"
+                result="mtl"
+              ></feImage>
+              <feImage
+                href="./assets/6a13478118ec3b0d9e1b0e99798e644b.png"
+                x="{{m.xr}}"
+                y="0"
+                width="32"
+                height="32"
+                preserveAspectRatio="none"
+                result="mtr"
+              ></feImage>
+              <feImage
+                href="./assets/c71acfa030b4cfc850939cdd62cb5fe9.png"
+                x="0"
+                y="{{m.yb}}"
+                width="32"
+                height="32"
+                preserveAspectRatio="none"
+                result="mbl"
+              ></feImage>
+              <feImage
+                href="./assets/bfecea5437a0432631688302c9b0ea3d.png"
+                x="{{m.xr}}"
+                y="{{m.yb}}"
+                width="32"
+                height="32"
+                preserveAspectRatio="none"
+                result="mbr"
+              ></feImage>
+              <feImage
+                href="./assets/31da4ab2ecbb7ea98bb6064ae9650d18.png"
+                x="32"
+                y="0"
+                width="{{m.iw}}"
+                height="32"
+                preserveAspectRatio="none"
+                result="mt"
+              ></feImage>
+              <feImage
+                href="./assets/041e4e4918cd53c9b6be21ad4a7dbd8d.png"
+                x="32"
+                y="{{m.yb}}"
+                width="{{m.iw}}"
+                height="32"
+                preserveAspectRatio="none"
+                result="mb"
+              ></feImage>
+              <feImage
+                href="./assets/bdbdb78613948acb928c5de31ae3df50.png"
+                x="0"
+                y="32"
+                width="32"
+                height="{{m.ih}}"
+                preserveAspectRatio="none"
+                result="ml"
+              ></feImage>
+              <feImage
+                href="./assets/f06b33f36ce6de6dbd3e7b72342217fd.png"
+                x="{{m.xr}}"
+                y="32"
+                width="32"
+                height="{{m.ih}}"
+                preserveAspectRatio="none"
+                result="mr"
+              ></feImage>
+              <feMerge x="0" y="0" width="{{m.w}}" height="{{m.h}}" result="map">
+                <feMergeNode in="mn"></feMergeNode>
+                <feMergeNode in="mt"></feMergeNode>
+                <feMergeNode in="mb"></feMergeNode>
+                <feMergeNode in="ml"></feMergeNode>
+                <feMergeNode in="mr"></feMergeNode>
+                <feMergeNode in="mtl"></feMergeNode>
+                <feMergeNode in="mtr"></feMergeNode>
+                <feMergeNode in="mbl"></feMergeNode>
+                <feMergeNode in="mbr"></feMergeNode>
+              </feMerge>
+              <feDisplacementMap
+                in="SourceGraphic"
+                in2="map"
+                scale="{{m.sr}}"
+                xChannelSelector="R"
+                yChannelSelector="G"
+                result="dr"
+              ></feDisplacementMap>
+              <feColorMatrix
+                in="dr"
+                type="matrix"
+                values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"
+                result="cr"
+              ></feColorMatrix>
+              <feDisplacementMap
+                in="SourceGraphic"
+                in2="map"
+                scale="{{m.sg}}"
+                xChannelSelector="R"
+                yChannelSelector="G"
+                result="dg"
+              ></feDisplacementMap>
+              <feColorMatrix
+                in="dg"
+                type="matrix"
+                values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0"
+                result="cg"
+              ></feColorMatrix>
+              <feDisplacementMap
+                in="SourceGraphic"
+                in2="map"
+                scale="{{m.sb}}"
+                xChannelSelector="R"
+                yChannelSelector="G"
+                result="db"
+              ></feDisplacementMap>
+              <feColorMatrix
+                in="db"
+                type="matrix"
+                values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0"
+                result="cb"
+              ></feColorMatrix>
+              <feBlend in="cr" in2="cg" mode="screen" result="crg"></feBlend>
+              <feBlend in="crg" in2="cb" mode="screen"></feBlend>
+            </filter>
+          </svg>
+        </sc-for>
+
+        <header
+          style="
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 72px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+          "
+        >
+          <div style="display: flex; align-items: center; gap: 24px">
+            <a
+              href="#top"
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+                color: oklch(0.985 0 0);
+              "
+            >
+              <img
+                src="./assets/01958880795d93e6f5079a3429582cda.png"
+                alt=""
+                style="width: 28px; height: 32px; object-fit: contain"
+              />
+              <span
+                style="
+                  font-size: 15px;
+                  line-height: 16px;
+                  font-weight: 600;
+                  letter-spacing: -0.01em;
+                "
+                >Blue Macaw</span
+              >
+            </a>
+            <nav
+              aria-label="Main"
+              class="bm-nav-links"
+              style="display: flex; align-items: center; gap: 2px"
+            >
+              <a
+                class="bm-ghost"
+                href="#services"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  height: 32px;
+                  padding: 0 10px;
+                  border-radius: 8px;
+                  color: oklch(0.708 0 0);
+                  text-decoration: none;
+                  font-weight: 500;
+                "
+                >Services</a
+              >
+              <a
+                class="bm-ghost"
+                href="#why"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  height: 32px;
+                  padding: 0 10px;
+                  border-radius: 8px;
+                  color: oklch(0.708 0 0);
+                  text-decoration: none;
+                  font-weight: 500;
+                "
+                >Why us</a
+              >
+              <a
+                class="bm-ghost"
+                href="#how"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  height: 32px;
+                  padding: 0 10px;
+                  border-radius: 8px;
+                  color: oklch(0.708 0 0);
+                  text-decoration: none;
+                  font-weight: 500;
+                "
+                >How it works</a
+              >
+              <a
+                class="bm-ghost"
+                href="#about"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  height: 32px;
+                  padding: 0 10px;
+                  border-radius: 8px;
+                  color: oklch(0.708 0 0);
+                  text-decoration: none;
+                  font-weight: 500;
+                "
+                >About</a
+              >
+            </nav>
+          </div>
+          <div style="display: flex; align-items: center; gap: 4px">
+            <a
+              class="bm-ghost"
+              href="mailto:"
+              style="
+                display: inline-flex;
+                align-items: center;
+                height: 32px;
+                padding: 0 10px;
+                border-radius: 8px;
+                color: oklch(0.708 0 0);
+                text-decoration: none;
+                font-weight: 500;
+              "
+              >Contact</a
+            >
+            <a
+              class="bm-primary"
+              href="#book"
+              style="
+                display: inline-flex;
+                align-items: center;
+                height: 32px;
+                padding: 0 14px;
+                border-radius: 8px;
+                background: oklch(0.985 0 0);
+                color: oklch(0.205 0 0);
+                text-decoration: none;
+                font-weight: 500;
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+              "
+              >Book a call</a
+            >
+          </div>
+        </header>
+
+        <nav
+          aria-label="Main, compact"
+          class="glass bm-float {{floatOn}}"
+          data-glass="9"
+          style="-webkit-backdrop-filter: {{glass.c9}}; backdrop-filter: {{glass.c9}}; background: color-mix(in oklch, oklch(0.145 0 0) 55%, transparent); display: flex; align-items: center; gap: 4px; height: 56px; padding: 0 10px 0 12px; box-sizing: border-box; max-width: calc(100vw - 32px); white-space: nowrap"
+        >
+          <a
+            href="#top"
+            aria-label="Blue Macaw, back to top"
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 36px;
+              height: 36px;
+              border-radius: 8px;
+              margin-right: 4px;
+            "
+          >
+            <img
+              src="./assets/01958880795d93e6f5079a3429582cda.png"
+              alt=""
+              style="width: 24px; height: 27px; object-fit: contain"
+            />
+          </a>
+          <div class="bm-float-links" style="display: flex; align-items: center; gap: 2px">
+            <a
+              class="bm-ghost"
+              href="#services"
+              style="
+                display: inline-flex;
+                align-items: center;
+                height: 32px;
+                padding: 0 10px;
+                border-radius: 8px;
+                color: oklch(0.708 0 0);
+                text-decoration: none;
+                font-weight: 500;
+              "
+              >Services</a
+            >
+            <a
+              class="bm-ghost"
+              href="#why"
+              style="
+                display: inline-flex;
+                align-items: center;
+                height: 32px;
+                padding: 0 10px;
+                border-radius: 8px;
+                color: oklch(0.708 0 0);
+                text-decoration: none;
+                font-weight: 500;
+              "
+              >Why us</a
+            >
+            <a
+              class="bm-ghost"
+              href="#how"
+              style="
+                display: inline-flex;
+                align-items: center;
+                height: 32px;
+                padding: 0 10px;
+                border-radius: 8px;
+                color: oklch(0.708 0 0);
+                text-decoration: none;
+                font-weight: 500;
+              "
+              >How it works</a
+            >
+            <a
+              class="bm-ghost"
+              href="#about"
+              style="
+                display: inline-flex;
+                align-items: center;
+                height: 32px;
+                padding: 0 10px;
+                border-radius: 8px;
+                color: oklch(0.708 0 0);
+                text-decoration: none;
+                font-weight: 500;
+              "
+              >About</a
+            >
+          </div>
+          <a
+            class="bm-outline"
+            href="#book"
+            style="
+              display: inline-flex;
+              align-items: center;
+              height: 32px;
+              margin-left: 6px;
+              padding: 0 12px;
+              border-radius: 8px;
+              border: 1px solid oklch(0.269 0 0);
+              background: oklch(0.269 0 0);
+              color: oklch(0.985 0 0);
+              text-decoration: none;
+              font-weight: 500;
+              box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            "
+            >Book a call</a
+          >
+        </nav>
+
+        <main id="top">
+          <div style="position: relative; background: transparent">
+            <div
+              aria-hidden="true"
+              style="
+                position: absolute;
+                top: -72px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 0;
+                pointer-events: none;
+                background-image: radial-gradient(
+                  color-mix(in oklch, oklch(0.985 0 0) 9%, transparent) 1px,
+                  transparent 1.5px
+                );
+                background-size: 22px 22px;
+                background-attachment: fixed;
+                -webkit-mask-image: linear-gradient(
+                  to bottom,
+                  #000 0,
+                  #000 calc(100% - 320px),
+                  transparent 100%
+                );
+                mask-image: linear-gradient(
+                  to bottom,
+                  #000 0,
+                  #000 calc(100% - 320px),
+                  transparent 100%
+                );
+              "
+            ></div>
+            <div
+              aria-hidden="true"
+              style="
+                position: absolute;
+                inset: 0;
+                overflow: hidden;
+                pointer-events: none;
+                z-index: 0;
+                -webkit-mask-image: linear-gradient(
+                  to bottom,
+                  #000 0,
+                  #000 calc(100% - 200px),
+                  transparent 100%
+                );
+                mask-image: linear-gradient(
+                  to bottom,
+                  #000 0,
+                  #000 calc(100% - 200px),
+                  transparent 100%
+                );
+              "
+            >
+              <sc-if value="{{showWaves}}" hint-placeholder-val="{{ true }}">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 1600 600"
+                  preserveAspectRatio="none"
+                  style="
+                    position: absolute;
+                    left: -40px;
+                    top: 260px;
+                    width: calc(100% + 160px);
+                    height: 560px;
+                    pointer-events: none;
+                    z-index: 0;
+                  "
+                >
+                  <g class="bm-wave" fill="none" stroke="#82b4ff" stroke-width="1.5">
+                    <path
+                      d="M0 360 C 240 260, 480 470, 760 350 S 1280 230, 1600 330"
+                      stroke-opacity="0.22"
+                    ></path>
+                    <path
+                      d="M0 390 C 260 300, 500 500, 780 380 S 1300 260, 1600 360"
+                      stroke-opacity="0.16"
+                    ></path>
+                    <path
+                      d="M0 420 C 280 340, 520 530, 800 410 S 1320 290, 1600 390"
+                      stroke-opacity="0.11"
+                    ></path>
+                    <path
+                      d="M0 450 C 300 380, 540 560, 820 440 S 1340 320, 1600 420"
+                      stroke-opacity="0.07"
+                    ></path>
+                  </g>
+                </svg>
+              </sc-if>
+              <sc-if value="{{showParticles}}" hint-placeholder-val="{{ true }}">
+                <div
+                  aria-hidden="true"
+                  style="position: absolute; inset: 0; pointer-events: none; z-index: 0"
+                >
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 8%;
+                      top: 180px;
+                      width: 3px;
+                      height: 3px;
+                      animation-duration: 28s, 5s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 22%;
+                      top: 60px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 19s, 3.5s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 41%;
+                      top: 440px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 33s, 4.5s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 63%;
+                      top: 40px;
+                      width: 3px;
+                      height: 3px;
+                      animation-duration: 24s, 6s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 78%;
+                      top: 530px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 17s, 4s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 91%;
+                      top: 220px;
+                      width: 3px;
+                      height: 3px;
+                      animation-duration: 36s, 5.5s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 34%;
+                      top: 720px;
+                      width: 3px;
+                      height: 3px;
+                      animation-duration: 21s, 3.8s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 56%;
+                      top: 300px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 26s, 4.2s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 3%;
+                      top: 420px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 22s, 3.2s;
+                      animation-delay:
+                        -4s,
+                        -1s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 12%;
+                      top: 560px;
+                      width: 3px;
+                      height: 3px;
+                      animation-duration: 31s, 4.6s;
+                      animation-delay:
+                        -9s,
+                        -2s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 17%;
+                      top: 330px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 18s, 3.9s;
+                      animation-delay:
+                        -3s,
+                        -0.5s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 27%;
+                      top: 470px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 29s, 5.1s;
+                      animation-delay:
+                        -12s,
+                        -3s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 30%;
+                      top: 120px;
+                      width: 3px;
+                      height: 3px;
+                      animation-duration: 25s, 4.4s;
+                      animation-delay:
+                        -6s,
+                        -1.5s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 37%;
+                      top: 250px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 20s, 3.3s;
+                      animation-delay:
+                        -14s,
+                        -2.2s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 46%;
+                      top: 90px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 34s, 5.6s;
+                      animation-delay:
+                        -2s,
+                        -0.8s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 49%;
+                      top: 600px;
+                      width: 3px;
+                      height: 3px;
+                      animation-duration: 23s, 4.1s;
+                      animation-delay:
+                        -10s,
+                        -3.4s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 52%;
+                      top: 400px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 27s, 3.7s;
+                      animation-delay:
+                        -7s,
+                        -1.2s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 59%;
+                      top: 180px;
+                      width: 3px;
+                      height: 3px;
+                      animation-duration: 19s, 4.9s;
+                      animation-delay:
+                        -5s,
+                        -2.6s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 66%;
+                      top: 360px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 32s, 3.5s;
+                      animation-delay:
+                        -15s,
+                        -0.3s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 70%;
+                      top: 640px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 21s, 5.3s;
+                      animation-delay:
+                        -8s,
+                        -4s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 73%;
+                      top: 100px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 28s, 4.3s;
+                      animation-delay:
+                        -11s,
+                        -1.9s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 75%;
+                      top: 270px;
+                      width: 3px;
+                      height: 3px;
+                      animation-duration: 24s, 3.6s;
+                      animation-delay:
+                        -1s,
+                        -2.8s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 82%;
+                      top: 450px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 30s, 4.7s;
+                      animation-delay:
+                        -13s,
+                        -0.6s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 85%;
+                      top: 150px;
+                      width: 3px;
+                      height: 3px;
+                      animation-duration: 17s, 5.8s;
+                      animation-delay:
+                        -4s,
+                        -3.1s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 88%;
+                      top: 580px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 26s, 3.4s;
+                      animation-delay:
+                        -9s,
+                        -1.4s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 95%;
+                      top: 380px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 35s, 4.5s;
+                      animation-delay:
+                        -6s,
+                        -2.3s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 97%;
+                      top: 70px;
+                      width: 3px;
+                      height: 3px;
+                      animation-duration: 22s, 5s;
+                      animation-delay:
+                        -12s,
+                        -0.9s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 6%;
+                      top: 40px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 27s, 3.8s;
+                      animation-delay:
+                        -3s,
+                        -3.6s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 43%;
+                      top: 690px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 33s, 4.8s;
+                      animation-delay:
+                        -16s,
+                        -1.7s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 61%;
+                      top: 500px;
+                      width: 3px;
+                      height: 3px;
+                      animation-duration: 20s, 4s;
+                      animation-delay:
+                        -7s,
+                        -2.9s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 20%;
+                      top: 650px;
+                      width: 2px;
+                      height: 2px;
+                      animation-duration: 29s, 5.4s;
+                      animation-delay:
+                        -10s,
+                        -0.4s;
+                    "
+                  ></div>
+                  <div
+                    class="bm-p"
+                    style="
+                      left: 90%;
+                      top: 700px;
+                      width: 3px;
+                      height: 3px;
+                      animation-duration: 24s, 3.9s;
+                      animation-delay:
+                        -5s,
+                        -2.1s;
+                    "
+                  ></div>
+                </div>
+              </sc-if>
+            </div>
+            <div
+              style="
+                position: relative;
+                z-index: 1;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 88px 24px 96px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                gap: 64px;
+              "
+            >
+              <section
+                aria-labelledby="hero-title"
+                style="display: flex; flex-direction: column; align-items: flex-start; gap: 24px"
+              >
+                <a
+                  href="#services"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 4px 12px 4px 4px;
+                    border-radius: 9999px;
+                    border: 1px solid oklch(0.269 0 0);
+                    background: color-mix(in oklch, oklch(0.145 0 0) 60%, transparent);
+                    color: oklch(0.708 0 0);
+                    text-decoration: none;
+                    font-size: 13px;
+                    line-height: 16px;
+                    font-weight: 500;
+                  "
+                >
+                  <span
+                    style="
+                      padding: 3px 8px;
+                      border-radius: 9999px;
+                      background: oklch(0.269 0 0);
+                      color: oklch(0.985 0 0);
+                      font-size: 12px;
+                      line-height: 16px;
+                    "
+                    >Services</span
+                  >
+                  Deployment, configuration and N1 support →</a
+                >
+                <h1
+                  id="hero-title"
+                  style="
+                    margin: 0;
+                    font-size: clamp(44px, 6.2vw, 80px);
+                    line-height: 1.02;
+                    font-weight: 600;
+                    letter-spacing: -0.035em;
+                    max-width: 16ch;
+                  "
+                >
+                  Security platforms, deployed and supported.
+                </h1>
+                <p
+                  style="
+                    margin: 0;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: oklch(0.708 0 0);
+                    max-width: 52ch;
+                  "
+                >
+                  Purpose-built for companies that run NGFW, SD-WAN, SASE and cloud security. One
+                  team from design to go-live, and the first line of support after it.
+                </p>
+              </section>
+
+              <section
+                aria-labelledby="stack-title"
+                class="glass"
+                data-glass="0"
+                style="-webkit-backdrop-filter: {{glass.c0}}; backdrop-filter: {{glass.c0}}; padding: 14px 24px; display: flex; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 12px 32px; align-items: center; flex-wrap: wrap; border: 1px solid color-mix(in oklch, oklch(0.985 0 0) 14%, transparent); border-radius: 16px"
+              >
+                <div style="display: none; align-items: center; justify-content: center"></div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    gap: 12px 32px;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    flex: 1 1 auto;
+                  "
+                >
+                  <h2
+                    id="stack-title"
+                    style="
+                      margin: 0;
+                      font-size: 12px;
+                      line-height: 16px;
+                      font-weight: 500;
+                      color: oklch(0.708 0 0);
+                      white-space: nowrap;
+                    "
+                  >
+                    Platforms we deploy and support
+                  </h2>
+                  <ul
+                    style="
+                      margin: 0;
+                      padding: 0;
+                      list-style: none;
+                      display: flex;
+                      grid-template-columns: repeat(2, minmax(0, 1fr));
+                      column-gap: 24px;
+                      flex-wrap: wrap;
+                      align-items: center;
+                      gap: 8px 24px;
+                    "
+                  >
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 0px;
+                        border-top: none;
+                        font-size: 14px;
+                        font-weight: 500;
+                        border-bottom: none;
+                        white-space: nowrap;
+                      "
+                    >
+                      <span
+                        aria-hidden="true"
+                        style="width: 6px; height: 6px; border-radius: 9999px; background: #82b4ff"
+                      ></span
+                      >NGFW
+                    </li>
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 0px;
+                        border-top: none;
+                        font-size: 14px;
+                        font-weight: 500;
+                        border-bottom: none;
+                        white-space: nowrap;
+                      "
+                    >
+                      <span
+                        aria-hidden="true"
+                        style="width: 6px; height: 6px; border-radius: 9999px; background: #82b4ff"
+                      ></span
+                      >SD-WAN
+                    </li>
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 0px;
+                        border-top: none;
+                        font-size: 14px;
+                        font-weight: 500;
+                        border-bottom: none;
+                        white-space: nowrap;
+                      "
+                    >
+                      <span
+                        aria-hidden="true"
+                        style="width: 6px; height: 6px; border-radius: 9999px; background: #82b4ff"
+                      ></span
+                      >SASE
+                    </li>
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 0px;
+                        border-top: none;
+                        font-size: 14px;
+                        font-weight: 500;
+                        border-bottom: none;
+                        white-space: nowrap;
+                      "
+                    >
+                      <span
+                        aria-hidden="true"
+                        style="width: 6px; height: 6px; border-radius: 9999px; background: #82b4ff"
+                      ></span
+                      >ZTNA
+                    </li>
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 0px;
+                        border-top: none;
+                        font-size: 14px;
+                        font-weight: 500;
+                        border-bottom: none;
+                        white-space: nowrap;
+                      "
+                    >
+                      <span
+                        aria-hidden="true"
+                        style="width: 6px; height: 6px; border-radius: 9999px; background: #82b4ff"
+                      ></span
+                      >Secure web gateway
+                    </li>
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 0px;
+                        border-top: none;
+                        font-size: 14px;
+                        font-weight: 500;
+                        border-bottom: none;
+                        white-space: nowrap;
+                      "
+                    >
+                      <span
+                        aria-hidden="true"
+                        style="width: 6px; height: 6px; border-radius: 9999px; background: #82b4ff"
+                      ></span
+                      >Cloud security
+                    </li>
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 0px;
+                        border-top: none;
+                        border-bottom: none;
+                        font-size: 14px;
+                        font-weight: 500;
+                        white-space: nowrap;
+                      "
+                    >
+                      <span
+                        aria-hidden="true"
+                        style="width: 6px; height: 6px; border-radius: 9999px; background: #82b4ff"
+                      ></span
+                      >Centralized management
+                    </li>
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 0px;
+                        border-top: none;
+                        border-bottom: none;
+                        font-size: 14px;
+                        font-weight: 500;
+                        white-space: nowrap;
+                      "
+                    >
+                      <span
+                        aria-hidden="true"
+                        style="width: 6px; height: 6px; border-radius: 9999px; background: #82b4ff"
+                      ></span
+                      >Log analytics
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div style="background: transparent">
+            <section
+              id="why"
+              aria-labelledby="why-title"
+              style="
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 96px 24px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                gap: 48px;
+              "
+            >
+              <h2
+                id="why-title"
+                style="
+                  margin: 0;
+                  font-size: clamp(28px, 3.4vw, 40px);
+                  line-height: 1.1;
+                  font-weight: 600;
+                  letter-spacing: -0.03em;
+                  max-width: 22ch;
+                "
+              >
+                Done right the first time.
+                <span style="color: oklch(0.708 0 0)">Built to be run by your team.</span>
+              </h2>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+                  gap: 32px;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    padding-left: 24px;
+                    border-left: 1px solid oklch(0.269 0 0);
+                  "
+                >
+                  <span style="font-size: 12px; line-height: 16px; color: #82b4ff; font-weight: 500"
+                    >0.1</span
+                  >
+                  <h3 style="margin: 0; font-size: 16px; line-height: 22px; font-weight: 600">
+                    Configured against real attacks
+                  </h3>
+                  <p style="margin: 0; font-size: 15px; line-height: 22px; color: oklch(0.708 0 0)">
+                    Our engineering comes from offensive security, so every configuration is checked
+                    for how it would actually be bypassed.
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    padding-left: 24px;
+                    border-left: 1px solid oklch(0.269 0 0);
+                  "
+                >
+                  <span style="font-size: 12px; line-height: 16px; color: #82b4ff; font-weight: 500"
+                    >0.2</span
+                  >
+                  <h3 style="margin: 0; font-size: 16px; line-height: 22px; font-weight: 600">
+                    Built to be operated
+                  </h3>
+                  <p style="margin: 0; font-size: 15px; line-height: 22px; color: oklch(0.708 0 0)">
+                    Consistent policies and centralized management, so your team can understand and
+                    change the setup after go-live.
+                  </p>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    padding-left: 24px;
+                    border-left: 1px solid oklch(0.269 0 0);
+                  "
+                >
+                  <span style="font-size: 12px; line-height: 16px; color: #82b4ff; font-weight: 500"
+                    >0.3</span
+                  >
+                  <h3 style="margin: 0; font-size: 16px; line-height: 22px; font-weight: 600">
+                    Documented and handed over
+                  </h3>
+                  <p style="margin: 0; font-size: 15px; line-height: 22px; color: oklch(0.708 0 0)">
+                    Every project ends with as-built documentation and a walkthrough, so nothing
+                    lives only in one engineer's head.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div style="position: relative; background: transparent">
+            <div
+              aria-hidden="true"
+              style="
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                pointer-events: none;
+                clip-path: inset(0);
+                -webkit-mask-image: linear-gradient(
+                  to bottom,
+                  transparent 0,
+                  #000 320px,
+                  #000 calc(100% - 320px),
+                  transparent 100%
+                );
+                mask-image: linear-gradient(
+                  to bottom,
+                  transparent 0,
+                  #000 320px,
+                  #000 calc(100% - 320px),
+                  transparent 100%
+                );
+              "
+            >
+              <div style="position: fixed; inset: 0; pointer-events: none">
+                <div
+                  class="bm-blob"
+                  style="
+                    position: absolute;
+                    left: 4%;
+                    top: 36%;
+                    width: 440px;
+                    height: 440px;
+                    border-radius: 9999px;
+                    background: #82b4ff;
+                    opacity: 0.32;
+                    filter: blur(90px);
+                  "
+                ></div>
+                <div
+                  class="bm-blob"
+                  style="
+                    position: absolute;
+                    left: 38%;
+                    top: 26%;
+                    width: 560px;
+                    height: 520px;
+                    border-radius: 9999px;
+                    background: oklch(0.488 0.243 264.376);
+                    opacity: 0.5;
+                    filter: blur(100px);
+                    animation-duration: 34s;
+                    animation-delay: -8s;
+                  "
+                ></div>
+                <div
+                  class="bm-blob"
+                  style="
+                    position: absolute;
+                    right: 2%;
+                    top: 52%;
+                    width: 400px;
+                    height: 400px;
+                    border-radius: 9999px;
+                    background: #82b4ff;
+                    opacity: 0.28;
+                    filter: blur(90px);
+                    animation-duration: 26s;
+                    animation-delay: -14s;
+                  "
+                ></div>
+              </div>
+            </div>
+            <section
+              id="services"
+              aria-labelledby="services-title"
+              style="
+                position: relative;
+                z-index: 1;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 120px 24px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                gap: 112px;
+              "
+            >
+              <div style="display: flex; flex-direction: column; gap: 16px; max-width: 720px">
+                <h2
+                  id="services-title"
+                  style="
+                    margin: 0;
+                    font-size: clamp(32px, 4.2vw, 52px);
+                    line-height: 1.05;
+                    font-weight: 600;
+                    letter-spacing: -0.035em;
+                  "
+                >
+                  Deploy, configure, support.
+                </h2>
+                <p style="margin: 0; font-size: 18px; line-height: 28px; color: oklch(0.708 0 0)">
+                  Bring us in for a new platform, to fix the one you already have, or to run the
+                  first line of support once it is live.
+                </p>
+              </div>
+
+              <article
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+                  gap: 48px 64px;
+                  align-items: center;
+                "
+              >
+                <div style="display: flex; flex-direction: column; gap: 20px">
+                  <span
+                    style="
+                      align-self: flex-start;
+                      padding: 2px 8px;
+                      border-radius: 8px;
+                      background: oklch(0.269 0 0);
+                      font-size: 12px;
+                      line-height: 16px;
+                      font-weight: 500;
+                    "
+                    >Project</span
+                  >
+                  <h3
+                    style="
+                      margin: 0;
+                      font-size: clamp(24px, 2.6vw, 32px);
+                      line-height: 1.15;
+                      font-weight: 600;
+                      letter-spacing: -0.025em;
+                    "
+                  >
+                    Solution deployment
+                  </h3>
+                  <p
+                    style="
+                      margin: 0;
+                      font-size: 16px;
+                      line-height: 24px;
+                      color: oklch(0.708 0 0);
+                      max-width: 46ch;
+                    "
+                  >
+                    We plan and roll out new security platforms with you, from sizing and design to
+                    cutover, so they go live without disrupting your operation.
+                  </p>
+                  <div style="border-bottom: 1px solid oklch(0.269 0 0)">
+                    <details class="bm-acc" style="border-top: 1px solid oklch(0.269 0 0)">
+                      <summary>
+                        Sizing and solution design<svg
+                          class="bm-plus"
+                          aria-hidden="true"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </summary>
+                      <p
+                        style="
+                          margin: 0 0 16px;
+                          color: oklch(0.708 0 0);
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        We size the platform for your traffic, sites and growth, and agree on the
+                        architecture before anything is installed.
+                      </p>
+                    </details>
+                    <details class="bm-acc" style="border-top: 1px solid oklch(0.269 0 0)">
+                      <summary>
+                        Installation and initial setup<svg
+                          class="bm-plus"
+                          aria-hidden="true"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </summary>
+                      <p
+                        style="
+                          margin: 0 0 16px;
+                          color: oklch(0.708 0 0);
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        NGFW, SD-WAN, SASE and ZTNA brought online and integrated with your network
+                        and identity provider.
+                      </p>
+                    </details>
+                    <details class="bm-acc" style="border-top: 1px solid oklch(0.269 0 0)">
+                      <summary>
+                        Migration from your current platform<svg
+                          class="bm-plus"
+                          aria-hidden="true"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </summary>
+                      <p
+                        style="
+                          margin: 0 0 16px;
+                          color: oklch(0.708 0 0);
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        Rules, objects and VPNs carried over and cleaned up on the way, not copied
+                        blindly.
+                      </p>
+                    </details>
+                    <details class="bm-acc" style="border-top: 1px solid oklch(0.269 0 0)">
+                      <summary>
+                        Cutover and handover<svg
+                          class="bm-plus"
+                          aria-hidden="true"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </summary>
+                      <p
+                        style="
+                          margin: 0 0 16px;
+                          color: oklch(0.708 0 0);
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        Planned change windows with a tested rollback path, then as-built
+                        documentation for your team.
+                      </p>
+                    </details>
+                  </div>
+                  <a class="bm-link" href="#book" style="align-self: flex-start; font-weight: 500"
+                    >Discuss a deployment →</a
+                  >
+                </div>
+                <div
+                  class="glass"
+                  data-glass="1"
+                  style="-webkit-backdrop-filter: {{glass.c1}}; backdrop-filter: {{glass.c1}}; padding: 24px; display: flex; flex-direction: column; gap: 16px"
+                >
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      gap: 12px;
+                    "
+                  >
+                    <span style="font-size: 13px; font-weight: 600">Deployment plan</span>
+                    <span style="font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)"
+                      >Phases</span
+                    >
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      border-top: 1px solid oklch(0.269 0 0);
+                    "
+                  >
+                    <div
+                      style="
+                        display: grid;
+                        grid-template-columns: 110px minmax(0, 1fr);
+                        align-items: center;
+                        gap: 12px;
+                        padding: 12px 0;
+                        border-bottom: 1px solid oklch(0.269 0 0);
+                      "
+                    >
+                      <span style="color: oklch(0.708 0 0)">Assessment</span
+                      ><span
+                        style="
+                          display: block;
+                          height: 22px;
+                          margin-left: 0%;
+                          width: 22%;
+                          border-radius: 6px;
+                          background: color-mix(in oklch, #82b4ff 22%, transparent);
+                          border: 1px solid color-mix(in oklch, #82b4ff 55%, transparent);
+                        "
+                      ></span>
+                    </div>
+                    <div
+                      style="
+                        display: grid;
+                        grid-template-columns: 110px minmax(0, 1fr);
+                        align-items: center;
+                        gap: 12px;
+                        padding: 12px 0;
+                        border-bottom: 1px solid oklch(0.269 0 0);
+                      "
+                    >
+                      <span style="color: oklch(0.708 0 0)">Design</span
+                      ><span
+                        style="
+                          display: block;
+                          height: 22px;
+                          margin-left: 16%;
+                          width: 26%;
+                          border-radius: 6px;
+                          background: color-mix(in oklch, #82b4ff 22%, transparent);
+                          border: 1px solid color-mix(in oklch, #82b4ff 55%, transparent);
+                        "
+                      ></span>
+                    </div>
+                    <div
+                      style="
+                        display: grid;
+                        grid-template-columns: 110px minmax(0, 1fr);
+                        align-items: center;
+                        gap: 12px;
+                        padding: 12px 0;
+                        border-bottom: 1px solid oklch(0.269 0 0);
+                      "
+                    >
+                      <span style="color: oklch(0.708 0 0)">Installation</span
+                      ><span
+                        style="
+                          display: block;
+                          height: 22px;
+                          margin-left: 36%;
+                          width: 30%;
+                          border-radius: 6px;
+                          background: color-mix(in oklch, #82b4ff 22%, transparent);
+                          border: 1px solid color-mix(in oklch, #82b4ff 55%, transparent);
+                        "
+                      ></span>
+                    </div>
+                    <div
+                      style="
+                        display: grid;
+                        grid-template-columns: 110px minmax(0, 1fr);
+                        align-items: center;
+                        gap: 12px;
+                        padding: 12px 0;
+                        border-bottom: 1px solid oklch(0.269 0 0);
+                      "
+                    >
+                      <span style="color: oklch(0.708 0 0)">Migration</span
+                      ><span
+                        style="
+                          display: block;
+                          height: 22px;
+                          margin-left: 56%;
+                          width: 26%;
+                          border-radius: 6px;
+                          background: color-mix(in oklch, #82b4ff 22%, transparent);
+                          border: 1px solid color-mix(in oklch, #82b4ff 55%, transparent);
+                        "
+                      ></span>
+                    </div>
+                    <div
+                      style="
+                        display: grid;
+                        grid-template-columns: 110px minmax(0, 1fr);
+                        align-items: center;
+                        gap: 12px;
+                        padding: 12px 0;
+                        border-bottom: 1px solid oklch(0.269 0 0);
+                      "
+                    >
+                      <span style="color: oklch(0.708 0 0)">Cutover</span
+                      ><span
+                        style="
+                          display: block;
+                          height: 22px;
+                          margin-left: 78%;
+                          width: 22%;
+                          border-radius: 6px;
+                          background: oklch(0.488 0.243 264.376);
+                          border: 1px solid #82b4ff;
+                        "
+                      ></span>
+                    </div>
+                  </div>
+                  <span style="font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)"
+                    >Illustrative plan. Timelines are agreed per project.</span
+                  >
+                </div>
+              </article>
+
+              <article
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+                  gap: 48px 64px;
+                  align-items: center;
+                "
+              >
+                <div
+                  class="glass"
+                  data-glass="2"
+                  style="-webkit-backdrop-filter: {{glass.c2}}; backdrop-filter: {{glass.c2}}; padding: 24px; display: flex; flex-direction: column; gap: 16px"
+                >
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      gap: 12px;
+                    "
+                  >
+                    <span style="font-size: 13px; font-weight: 600">Configuration review</span>
+                    <span style="font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)"
+                      >Checklist</span
+                    >
+                  </div>
+                  <ul
+                    style="
+                      margin: 0;
+                      padding: 0;
+                      list-style: none;
+                      display: flex;
+                      flex-direction: column;
+                      border-top: 1px solid oklch(0.269 0 0);
+                    "
+                  >
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        padding: 12px 0;
+                        border-bottom: 1px solid oklch(0.269 0 0);
+                      "
+                    >
+                      <svg
+                        aria-hidden="true"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#82b4ff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m9 12 2 2 4-4"></path></svg
+                      >Firewall policies and NAT
+                    </li>
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        padding: 12px 0;
+                        border-bottom: 1px solid oklch(0.269 0 0);
+                      "
+                    >
+                      <svg
+                        aria-hidden="true"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#82b4ff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m9 12 2 2 4-4"></path></svg
+                      >SD-WAN steering and VPNs
+                    </li>
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        padding: 12px 0;
+                        border-bottom: 1px solid oklch(0.269 0 0);
+                      "
+                    >
+                      <svg
+                        aria-hidden="true"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#82b4ff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m9 12 2 2 4-4"></path></svg
+                      >Network segmentation
+                    </li>
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        padding: 12px 0;
+                        border-bottom: 1px solid oklch(0.269 0 0);
+                      "
+                    >
+                      <svg
+                        aria-hidden="true"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#82b4ff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m9 12 2 2 4-4"></path></svg
+                      >Security profiles
+                    </li>
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        padding: 12px 0;
+                        border-bottom: 1px solid oklch(0.269 0 0);
+                      "
+                    >
+                      <svg
+                        aria-hidden="true"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#82b4ff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m9 12 2 2 4-4"></path></svg
+                      >Centralized management and logging
+                    </li>
+                    <li
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        padding: 12px 0;
+                        border-bottom: 1px solid oklch(0.269 0 0);
+                      "
+                    >
+                      <svg
+                        aria-hidden="true"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#82b4ff"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m9 12 2 2 4-4"></path></svg
+                      >Hardening and admin access
+                    </li>
+                  </ul>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 20px">
+                  <span
+                    style="
+                      align-self: flex-start;
+                      padding: 2px 8px;
+                      border-radius: 8px;
+                      background: oklch(0.269 0 0);
+                      font-size: 12px;
+                      line-height: 16px;
+                      font-weight: 500;
+                    "
+                    >Project or recurring</span
+                  >
+                  <h3
+                    style="
+                      margin: 0;
+                      font-size: clamp(24px, 2.6vw, 32px);
+                      line-height: 1.15;
+                      font-weight: 600;
+                      letter-spacing: -0.025em;
+                    "
+                  >
+                    Configuration and tuning
+                  </h3>
+                  <p
+                    style="
+                      margin: 0;
+                      font-size: 16px;
+                      line-height: 24px;
+                      color: oklch(0.708 0 0);
+                      max-width: 46ch;
+                    "
+                  >
+                    Get the platform you already own working the way it should: clean policies,
+                    centralized management and visibility you can use.
+                  </p>
+                  <div style="border-bottom: 1px solid oklch(0.269 0 0)">
+                    <details class="bm-acc" style="border-top: 1px solid oklch(0.269 0 0)">
+                      <summary>
+                        Policy and NAT cleanup<svg
+                          class="bm-plus"
+                          aria-hidden="true"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </summary>
+                      <p
+                        style="
+                          margin: 0 0 16px;
+                          color: oklch(0.708 0 0);
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        Unused, shadowed and overly broad rules found and fixed.
+                      </p>
+                    </details>
+                    <details class="bm-acc" style="border-top: 1px solid oklch(0.269 0 0)">
+                      <summary>
+                        SD-WAN, VPN and segmentation<svg
+                          class="bm-plus"
+                          aria-hidden="true"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </summary>
+                      <p
+                        style="
+                          margin: 0 0 16px;
+                          color: oklch(0.708 0 0);
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        Traffic steering, site-to-site and remote access, and network segments that
+                        match how you work.
+                      </p>
+                    </details>
+                    <details class="bm-acc" style="border-top: 1px solid oklch(0.269 0 0)">
+                      <summary>
+                        Security profiles<svg
+                          class="bm-plus"
+                          aria-hidden="true"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </summary>
+                      <p
+                        style="
+                          margin: 0 0 16px;
+                          color: oklch(0.708 0 0);
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        IPS, web filtering and application control tuned to stop threats without
+                        breaking the business.
+                      </p>
+                    </details>
+                    <details class="bm-acc" style="border-top: 1px solid oklch(0.269 0 0)">
+                      <summary>
+                        Management, logging and hardening<svg
+                          class="bm-plus"
+                          aria-hidden="true"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </summary>
+                      <p
+                        style="
+                          margin: 0 0 16px;
+                          color: oklch(0.708 0 0);
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        One place to manage devices and read logs, with admin access and services
+                        aligned with vendor best practices.
+                      </p>
+                    </details>
+                  </div>
+                  <a class="bm-link" href="#book" style="align-self: flex-start; font-weight: 500"
+                    >Request a configuration review →</a
+                  >
+                </div>
+              </article>
+
+              <article
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+                  gap: 48px 64px;
+                  align-items: center;
+                "
+              >
+                <div style="display: flex; flex-direction: column; gap: 20px">
+                  <span
+                    style="
+                      align-self: flex-start;
+                      padding: 2px 8px;
+                      border-radius: 8px;
+                      background: oklch(0.269 0 0);
+                      font-size: 12px;
+                      line-height: 16px;
+                      font-weight: 500;
+                    "
+                    >Monthly contract</span
+                  >
+                  <h3
+                    style="
+                      margin: 0;
+                      font-size: clamp(24px, 2.6vw, 32px);
+                      line-height: 1.15;
+                      font-weight: 600;
+                      letter-spacing: -0.025em;
+                    "
+                  >
+                    N1 support
+                  </h3>
+                  <p
+                    style="
+                      margin: 0;
+                      font-size: 16px;
+                      line-height: 24px;
+                      color: oklch(0.708 0 0);
+                      max-width: 46ch;
+                    "
+                  >
+                    The first line for your security platforms. We take the ticket, solve what is in
+                    scope and escalate the rest to the vendor with everything they need.
+                  </p>
+                  <div style="border-bottom: 1px solid oklch(0.269 0 0)">
+                    <details class="bm-acc" style="border-top: 1px solid oklch(0.269 0 0)">
+                      <summary>
+                        Ticket intake and triage<svg
+                          class="bm-plus"
+                          aria-hidden="true"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </summary>
+                      <p
+                        style="
+                          margin: 0 0 16px;
+                          color: oklch(0.708 0 0);
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        Every request logged, prioritized and answered within [YOUR SLA], during
+                        [YOUR SUPPORT HOURS].
+                      </p>
+                    </details>
+                    <details class="bm-acc" style="border-top: 1px solid oklch(0.269 0 0)">
+                      <summary>
+                        Routine changes<svg
+                          class="bm-plus"
+                          aria-hidden="true"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </summary>
+                      <p
+                        style="
+                          margin: 0 0 16px;
+                          color: oklch(0.708 0 0);
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        Rules, users and VPN access handled without waiting for a new project.
+                      </p>
+                    </details>
+                    <details class="bm-acc" style="border-top: 1px solid oklch(0.269 0 0)">
+                      <summary>
+                        Health checks and firmware planning<svg
+                          class="bm-plus"
+                          aria-hidden="true"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </summary>
+                      <p
+                        style="
+                          margin: 0 0 16px;
+                          color: oklch(0.708 0 0);
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        Regular checks on your platforms and planned updates, so problems surface
+                        before your users notice.
+                      </p>
+                    </details>
+                    <details class="bm-acc" style="border-top: 1px solid oklch(0.269 0 0)">
+                      <summary>
+                        Vendor escalation<svg
+                          class="bm-plus"
+                          aria-hidden="true"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M5 12h14"></path>
+                          <path d="M12 5v14"></path>
+                        </svg>
+                      </summary>
+                      <p
+                        style="
+                          margin: 0 0 16px;
+                          color: oklch(0.708 0 0);
+                          font-size: 15px;
+                          line-height: 22px;
+                        "
+                      >
+                        When an issue needs the manufacturer, we open the case and follow it through
+                        to the end.
+                      </p>
+                    </details>
+                  </div>
+                  <a class="bm-link" href="#book" style="align-self: flex-start; font-weight: 500"
+                    >Talk about support →</a
+                  >
+                </div>
+                <div
+                  class="glass"
+                  data-glass="3"
+                  style="-webkit-backdrop-filter: {{glass.c3}}; backdrop-filter: {{glass.c3}}; padding: 24px; display: flex; flex-direction: column; gap: 16px"
+                >
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      gap: 12px;
+                    "
+                  >
+                    <span style="font-size: 13px; font-weight: 600">How a request flows</span>
+                    <span style="font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)"
+                      >N1</span
+                    >
+                  </div>
+                  <ol
+                    style="
+                      margin: 0;
+                      padding: 0;
+                      list-style: none;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 0;
+                    "
+                  >
+                    <li
+                      style="
+                        display: grid;
+                        grid-template-columns: 20px minmax(0, 1fr);
+                        gap: 14px;
+                        padding-bottom: 20px;
+                      "
+                    >
+                      <span
+                        aria-hidden="true"
+                        style="
+                          width: 10px;
+                          height: 10px;
+                          margin: 5px 0 0 5px;
+                          border-radius: 9999px;
+                          background: #82b4ff;
+                          box-shadow: 0 0 0 4px color-mix(in oklch, #82b4ff 20%, transparent);
+                        "
+                      ></span>
+                      <div style="display: flex; flex-direction: column; gap: 2px">
+                        <span style="font-weight: 500">Request received</span
+                        ><span style="font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)"
+                          >By email or your support channel</span
+                        >
+                      </div>
+                    </li>
+                    <li
+                      style="
+                        display: grid;
+                        grid-template-columns: 20px minmax(0, 1fr);
+                        gap: 14px;
+                        padding-bottom: 20px;
+                      "
+                    >
+                      <span
+                        aria-hidden="true"
+                        style="
+                          width: 10px;
+                          height: 10px;
+                          margin: 5px 0 0 5px;
+                          border-radius: 9999px;
+                          background: #82b4ff;
+                          box-shadow: 0 0 0 4px color-mix(in oklch, #82b4ff 20%, transparent);
+                        "
+                      ></span>
+                      <div style="display: flex; flex-direction: column; gap: 2px">
+                        <span style="font-weight: 500">Triage</span
+                        ><span style="font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)"
+                          >Impact and priority set</span
+                        >
+                      </div>
+                    </li>
+                    <li
+                      style="
+                        display: grid;
+                        grid-template-columns: 20px minmax(0, 1fr);
+                        gap: 14px;
+                        padding-bottom: 20px;
+                      "
+                    >
+                      <span
+                        aria-hidden="true"
+                        style="
+                          width: 10px;
+                          height: 10px;
+                          margin: 5px 0 0 5px;
+                          border-radius: 9999px;
+                          background: #82b4ff;
+                          box-shadow: 0 0 0 4px color-mix(in oklch, #82b4ff 20%, transparent);
+                        "
+                      ></span>
+                      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                        <span
+                          style="
+                            padding: 6px 10px;
+                            border-radius: 8px;
+                            background: oklch(0.269 0 0);
+                            font-weight: 500;
+                          "
+                          >Resolved by our team</span
+                        ><span
+                          style="
+                            padding: 6px 10px;
+                            border-radius: 8px;
+                            border: 1px solid oklch(0.269 0 0);
+                            color: oklch(0.708 0 0);
+                            font-weight: 500;
+                          "
+                          >Escalated to the vendor</span
+                        >
+                      </div>
+                    </li>
+                    <li
+                      style="display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 14px"
+                    >
+                      <span
+                        aria-hidden="true"
+                        style="
+                          width: 10px;
+                          height: 10px;
+                          margin: 5px 0 0 5px;
+                          border-radius: 9999px;
+                          background: oklch(0.985 0 0);
+                        "
+                      ></span>
+                      <div style="display: flex; flex-direction: column; gap: 2px">
+                        <span style="font-weight: 500">Closed and documented</span
+                        ><span style="font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)"
+                          >You see what changed and why</span
+                        >
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+              </article>
+            </section>
+          </div>
+
+          <div style="background: transparent">
+            <section
+              id="how"
+              aria-labelledby="how-title"
+              style="
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 96px 24px;
+                box-sizing: border-box;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+                gap: 40px 64px;
+                align-items: start;
+              "
+            >
+              <div style="display: flex; flex-direction: column; gap: 16px">
+                <h2
+                  id="how-title"
+                  style="
+                    margin: 0;
+                    font-size: clamp(28px, 3.4vw, 40px);
+                    line-height: 1.1;
+                    font-weight: 600;
+                    letter-spacing: -0.03em;
+                  "
+                >
+                  From first call to ongoing support
+                </h2>
+                <p
+                  style="
+                    margin: 0;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: oklch(0.708 0 0);
+                    max-width: 40ch;
+                  "
+                >
+                  Four steps, the same team in each of them.
+                </p>
+              </div>
+              <ol
+                style="
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                  display: flex;
+                  flex-direction: column;
+                  border-top: 1px solid oklch(0.269 0 0);
+                "
+              >
+                <li
+                  style="
+                    display: grid;
+                    grid-template-columns: 48px minmax(0, 1fr);
+                    gap: 16px;
+                    padding: 20px 0;
+                    border-bottom: 1px solid oklch(0.269 0 0);
+                  "
+                >
+                  <span style="font-size: 13px; line-height: 22px; font-weight: 500; color: #82b4ff"
+                    >01</span
+                  >
+                  <div style="display: flex; flex-direction: column; gap: 4px">
+                    <h3 style="margin: 0; font-size: 16px; line-height: 22px; font-weight: 600">
+                      Assessment
+                    </h3>
+                    <p
+                      style="margin: 0; font-size: 15px; line-height: 22px; color: oklch(0.708 0 0)"
+                    >
+                      A discovery call and a look at your environment, requirements and current
+                      platform.
+                    </p>
+                  </div>
+                </li>
+                <li
+                  style="
+                    display: grid;
+                    grid-template-columns: 48px minmax(0, 1fr);
+                    gap: 16px;
+                    padding: 20px 0;
+                    border-bottom: 1px solid oklch(0.269 0 0);
+                  "
+                >
+                  <span style="font-size: 13px; line-height: 22px; font-weight: 500; color: #82b4ff"
+                    >02</span
+                  >
+                  <div style="display: flex; flex-direction: column; gap: 4px">
+                    <h3 style="margin: 0; font-size: 16px; line-height: 22px; font-weight: 600">
+                      Proposal
+                    </h3>
+                    <p
+                      style="margin: 0; font-size: 15px; line-height: 22px; color: oklch(0.708 0 0)"
+                    >
+                      A written scope with design, timeline and cost.
+                    </p>
+                  </div>
+                </li>
+                <li
+                  style="
+                    display: grid;
+                    grid-template-columns: 48px minmax(0, 1fr);
+                    gap: 16px;
+                    padding: 20px 0;
+                    border-bottom: 1px solid oklch(0.269 0 0);
+                  "
+                >
+                  <span style="font-size: 13px; line-height: 22px; font-weight: 500; color: #82b4ff"
+                    >03</span
+                  >
+                  <div style="display: flex; flex-direction: column; gap: 4px">
+                    <h3 style="margin: 0; font-size: 16px; line-height: 22px; font-weight: 600">
+                      Deployment and configuration
+                    </h3>
+                    <p
+                      style="margin: 0; font-size: 15px; line-height: 22px; color: oklch(0.708 0 0)"
+                    >
+                      We implement, test and cut over together with your team, then hand over the
+                      documentation.
+                    </p>
+                  </div>
+                </li>
+                <li
+                  style="
+                    display: grid;
+                    grid-template-columns: 48px minmax(0, 1fr);
+                    gap: 16px;
+                    padding: 20px 0;
+                    border-bottom: 1px solid oklch(0.269 0 0);
+                  "
+                >
+                  <span style="font-size: 13px; line-height: 22px; font-weight: 500; color: #82b4ff"
+                    >04</span
+                  >
+                  <div style="display: flex; flex-direction: column; gap: 4px">
+                    <h3 style="margin: 0; font-size: 16px; line-height: 22px; font-weight: 600">
+                      N1 support
+                    </h3>
+                    <p
+                      style="margin: 0; font-size: 15px; line-height: 22px; color: oklch(0.708 0 0)"
+                    >
+                      Ongoing first-line support on a monthly contract, with vendor escalation when
+                      needed.
+                    </p>
+                  </div>
+                </li>
+              </ol>
+            </section>
+          </div>
+
+          <div style="background: transparent">
+            <section
+              id="about"
+              aria-labelledby="about-title"
+              style="
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 112px 24px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                gap: 56px;
+              "
+            >
+              <h2
+                id="about-title"
+                style="
+                  margin: 0;
+                  font-size: clamp(24px, 3vw, 36px);
+                  line-height: 1.25;
+                  font-weight: 600;
+                  letter-spacing: -0.025em;
+                  max-width: 34ch;
+                "
+              >
+                Blue Macaw Cybersecurity is a security engineering company based in Brasília.
+                <span style="color: oklch(0.708 0 0)"
+                  >We deploy, configure and support enterprise network and cloud security platforms
+                  for clients in Brazil and abroad.</span
+                >
+              </h2>
+              <dl
+                style="
+                  margin: 0;
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+                  gap: 24px;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    padding-top: 16px;
+                    border-top: 1px solid oklch(0.269 0 0);
+                  "
+                >
+                  <dt style="font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)">
+                    Headquarters
+                  </dt>
+                  <dd style="margin: 0; font-weight: 500">Brasília, Brazil</dd>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    padding-top: 16px;
+                    border-top: 1px solid oklch(0.269 0 0);
+                  "
+                >
+                  <dt style="font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)">Focus</dt>
+                  <dd style="margin: 0; font-weight: 500">Network and cloud security platforms</dd>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    padding-top: 16px;
+                    border-top: 1px solid oklch(0.269 0 0);
+                  "
+                >
+                  <dt style="font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)">
+                    Services
+                  </dt>
+                  <dd style="margin: 0; font-weight: 500">
+                    Deployment, configuration and N1 support
+                  </dd>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    padding-top: 16px;
+                    border-top: 1px solid oklch(0.269 0 0);
+                  "
+                >
+                  <dt style="font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)">
+                    Team certifications
+                  </dt>
+                  <dd style="margin: 0; font-weight: 500">
+                    Vendor-certified cloud security architecture
+                  </dd>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    padding-top: 16px;
+                    border-top: 1px solid oklch(0.269 0 0);
+                  "
+                >
+                  <dt style="font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)">
+                    Languages
+                  </dt>
+                  <dd style="margin: 0; font-weight: 500">English, Portuguese</dd>
+                </div>
+              </dl>
+            </section>
+          </div>
+
+          <div style="background: transparent">
+            <section
+              id="book"
+              aria-labelledby="book-title"
+              style="
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 112px 24px;
+                box-sizing: border-box;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-end;
+                justify-content: space-between;
+                gap: 32px;
+              "
+            >
+              <div style="display: flex; flex-direction: column; gap: 12px">
+                <h2
+                  id="book-title"
+                  style="
+                    margin: 0;
+                    font-size: clamp(32px, 4.2vw, 52px);
+                    line-height: 1.05;
+                    font-weight: 600;
+                    letter-spacing: -0.035em;
+                  "
+                >
+                  Deployed right.<br /><span style="color: oklch(0.708 0 0)"
+                    >Supported from day one.</span
+                  >
+                </h2>
+                <p style="margin: 0; font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)">
+                  Booking link: [YOUR CALENDAR LINK]
+                </p>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 12px">
+                <a
+                  class="bm-primary"
+                  href="#book"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    height: 40px;
+                    padding: 0 18px;
+                    border-radius: 8px;
+                    background: oklch(0.985 0 0);
+                    color: oklch(0.205 0 0);
+                    text-decoration: none;
+                    font-weight: 500;
+                    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+                  "
+                >
+                  <svg
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                    <path d="M16 2v4"></path>
+                    <path d="M8 2v4"></path>
+                    <path d="M3 10h18"></path>
+                  </svg>
+                  Book a discovery call</a
+                >
+                <a
+                  class="bm-outline"
+                  href="mailto:"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    height: 40px;
+                    padding: 0 18px;
+                    border-radius: 8px;
+                    border: 1px solid oklch(0.269 0 0);
+                    background: transparent;
+                    color: oklch(0.985 0 0);
+                    text-decoration: none;
+                    font-weight: 500;
+                    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+                  "
+                >
+                  <svg
+                    aria-hidden="true"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                  Email [YOUR EMAIL]</a
+                >
+              </div>
+            </section>
+          </div>
+        </main>
+
+        <footer style="background: transparent; border-top: 1px solid oklch(0.269 0 0)">
+          <div
+            style="
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 56px 24px 40px;
+              box-sizing: border-box;
+              display: flex;
+              flex-direction: column;
+              gap: 48px;
+            "
+          >
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+                gap: 32px;
+              "
+            >
+              <div style="display: flex; flex-direction: column; gap: 12px">
+                <a
+                  href="#top"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    text-decoration: none;
+                    color: oklch(0.985 0 0);
+                  "
+                >
+                  <img
+                    src="./assets/01958880795d93e6f5079a3429582cda.png"
+                    alt=""
+                    style="width: 24px; height: 27px; object-fit: contain"
+                  />
+                  <span style="font-weight: 600">Blue Macaw</span>
+                </a>
+                <span style="font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)"
+                  >Brasília, Brazil</span
+                >
+              </div>
+              <nav aria-label="Services" style="display: flex; flex-direction: column; gap: 10px">
+                <span style="font-weight: 500">Services</span>
+                <a class="bm-link" href="#services">Solution deployment</a>
+                <a class="bm-link" href="#services">Configuration and tuning</a>
+                <a class="bm-link" href="#services">N1 support</a>
+              </nav>
+              <nav aria-label="Company" style="display: flex; flex-direction: column; gap: 10px">
+                <span style="font-weight: 500">Company</span>
+                <a class="bm-link" href="#why">Why us</a>
+                <a class="bm-link" href="#how">How it works</a>
+                <a class="bm-link" href="#about">About</a>
+              </nav>
+              <nav aria-label="Contact" style="display: flex; flex-direction: column; gap: 10px">
+                <span style="font-weight: 500">Contact</span>
+                <a class="bm-link" href="#book">Book a call</a>
+                <a class="bm-link" href="mailto:">[YOUR EMAIL]</a>
+              </nav>
+            </div>
+            <p style="margin: 0; font-size: 12px; line-height: 16px; color: oklch(0.708 0 0)">
+              © 2026 Blue Macaw Cybersecurity
+            </p>
+          </div>
+        </footer>
+      </div>
+    </x-dc>
+    <script
+      type="text/x-dc"
+      data-dc-script
+      data-props='{"refraction":{"editor":"boolean","default":true,"section":"Glass"},"ior":{"editor":"range","default":1.5,"min":1,"max":2.4,"step":0.05,"section":"Glass"},"dispersion":{"editor":"range","default":0.08,"min":0,"max":0.2,"step":0.01,"section":"Glass"},"showWaves":{"editor":"boolean","default":true,"section":"Background"},"showParticles":{"editor":"boolean","default":true,"section":"Background"},"$preview":{"width":1440,"height":5000}}'
+    >
+      class Component extends DCLogic {
+        isSupported() {
+          if (this._supported === undefined) {
+            var ua = (typeof navigator !== 'undefined' && navigator.userAgent) || '';
+            this._supported = typeof window !== 'undefined' && typeof ResizeObserver !== 'undefined' &&
+              (!!window.chrome || /Chrome\//.test(ua));
+          }
+          return this._supported;
+        }
+
+        componentDidMount() {
+          var me = this;
+          this._onScroll = function (e) {
+            var t = e && e.target;
+            var y = (t && t.nodeType === 1 ? t.scrollTop : 0) || window.scrollY ||
+              (document.scrollingElement && document.scrollingElement.scrollTop) || 0;
+            var on = y > 80;
+            if (on !== !!(me.state && me.state.scrolled)) me.setState({ scrolled: on });
+          };
+          window.addEventListener('scroll', this._onScroll, { passive: true, capture: true });
+          if (!this.isSupported()) return;
+          var self = this;
+          this._ro = new ResizeObserver(function () { self.schedule(); });
+          this._observed = [];
+          this.observe();
+          this.schedule();
+        }
+
+        componentDidUpdate(prev) {
+          if (!this.isSupported()) return;
+          var p = this.props, q = prev || {};
+          if (p.ior !== q.ior || p.dispersion !== q.dispersion || p.refraction !== q.refraction) this.schedule();
+          else this.observe();
+        }
+
+        componentWillUnmount() {
+          if (this._onScroll) window.removeEventListener('scroll', this._onScroll, { capture: true });
+          clearTimeout(this._timer);
+          if (this._ro) this._ro.disconnect();
+        }
+
+        observe() {
+          if (!this._ro) return;
+          var els = Array.prototype.slice.call((this._root || document).querySelectorAll('[data-glass]'));
+          var same = els.length === this._observed.length && els.every(function (e, i) { return e === this._observed[i]; }, this);
+          if (same) return;
+          this._ro.disconnect();
+          var ro = this._ro;
+          els.forEach(function (e) { ro.observe(e); });
+          this._observed = els;
+          this.schedule();
+        }
+
+        schedule() {
+          var self = this;
+          clearTimeout(this._timer);
+          this._timer = setTimeout(function () { self.build(); }, 120);
+        }
+
+        build() {
+          var st = this.state || {};
+          if ((this.props.refraction ?? true) === false) {
+            if (st.maps && st.maps.length) this.setState({ maps: [] });
+            return;
+          }
+          var n = Number(this.props.ior ?? 1.5);
+          var disp = Number(this.props.dispersion ?? 0.08);
+          var gen = (st.gen || 0) + 1;
+          var maps = [];
+          // The edge map is a 9-slice of uploaded tiles (a circular 18px bevel,
+          // refracted with Snell's law); here we only size it and set how far
+          // red, green and blue bend for the current IOR and dispersion.
+          var H = 12;
+          var shift = function (ior) {
+            var k = Math.max(ior, 1.0001);
+            return 2 * H * Math.tan(Math.PI / 2 - Math.asin(1 / k));
+          };
+          var sr = shift(n - disp), sg = shift(n), sb = shift(n + disp);
+          var root = this._root || document;
+          root.querySelectorAll('[data-glass]').forEach(function (el) {
+            var i = Number(el.getAttribute('data-glass'));
+            var w = Math.round(el.offsetWidth), h = Math.round(el.offsetHeight);
+            if (w < 64 || h < 40) return;
+            maps.push({ id: 'bm-ref-' + i + '-' + gen, i: i, w: w, h: h, xr: w - 32, yb: h - 32, iw: Math.max(0, w - 64), ih: Math.max(0, h - 64), sr: sr, sg: sg, sb: sb });
+          });
+          this.setState({ maps: maps, gen: gen });
+        }
+
+        renderVals() {
+          var self = this;
+          if (!this._rootRef) this._rootRef = function (el) { self._root = el; };
+          var on = this.isSupported() && (this.props.refraction ?? true) !== false;
+          var maps = on ? ((this.state && this.state.maps) || []) : [];
+          var byIndex = {};
+          maps.forEach(function (m) { byIndex[m.i] = m; });
+          var base = 'blur(14px) saturate(1.6)';
+          var glass = {};
+          for (var i = 0; i < 11; i++) {
+            var m = byIndex[i];
+            glass['c' + i] = m ? 'url(#' + m.id + ') blur(2.8px) saturate(1.6)' : base;
+          }
+          return {
+            rootRef: this._rootRef,
+            maps: maps,
+            glass: glass,
+            floatOn: (this.state && this.state.scrolled) ? 'is-on' : '',
+            showWaves: this.props.showWaves ?? true,
+            showParticles: this.props.showParticles ?? true
+          };
+        }
+      }
+    </script>
+  </body>
+</html>
