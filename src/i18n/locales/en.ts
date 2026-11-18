@@ -179,6 +179,25 @@ const en = {
       },
     ],
   },
+  fit: {
+    title: 'Security that fits your reality.',
+    titleMuted: 'Not only for companies with big budgets.',
+    body: "Information security shouldn't be so expensive that only companies with deep pockets can afford it. At Blue Macaw, we adapt each project to your budget and your reality, delivering real security at a cost that works for you, whatever the size of your company.",
+    points: [
+      {
+        title: 'Scoped to your budget',
+        body: 'We shape the project around what you can invest, not around a fixed package.',
+      },
+      {
+        title: 'Real security, not a token gesture',
+        body: 'Fitting your budget never means leaving out what actually keeps you protected.',
+      },
+      {
+        title: 'For companies of any size',
+        body: 'Security should be within reach of every business, not just the largest ones.',
+      },
+    ],
+  },
   about: {
     title: 'Blue Macaw Cybersecurity is a security engineering company based in Brazil.',
     titleMuted:

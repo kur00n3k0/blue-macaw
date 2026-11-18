@@ -13,7 +13,7 @@ describe('HomeView', () => {
   it('renders the hero and every section the nav links to', () => {
     const wrapper = mount(HomeView)
     expect(wrapper.find('h1').text()).toBe('Security platforms, deployed and supported.')
-    for (const id of ['why', 'services', 'how', 'about', 'book']) {
+    for (const id of ['why', 'services', 'how', 'fit', 'about', 'book']) {
       expect(wrapper.find(`#${id}`).exists()).toBe(true)
     }
   })

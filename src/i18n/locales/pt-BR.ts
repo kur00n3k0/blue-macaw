@@ -177,6 +177,25 @@ const ptBR: Messages = {
       },
     ],
   },
+  fit: {
+    title: 'Segurança que se adapta à sua realidade.',
+    titleMuted: 'Não só para quem tem muito dinheiro.',
+    body: 'Segurança da informação não precisa ser tão cara a ponto de só empresas com muito dinheiro terem condições de contratá-la. Na Blue Macaw, adaptamos o projeto ao seu orçamento e à sua realidade, com segurança de verdade que cabe no seu bolso, seja qual for o tamanho da sua empresa.',
+    points: [
+      {
+        title: 'Sob medida para o seu orçamento',
+        body: 'Montamos o projeto a partir do que você pode investir, não de um pacote fechado.',
+      },
+      {
+        title: 'Segurança real, não de fachada',
+        body: 'Caber no orçamento nunca significa deixar de fora o que realmente protege a sua empresa.',
+      },
+      {
+        title: 'Para empresas de qualquer porte',
+        body: 'Segurança deve estar ao alcance de todos, não apenas das grandes empresas.',
+      },
+    ],
+  },
   about: {
     title: 'A Blue Macaw Cybersecurity é uma empresa de engenharia de segurança sediada no Brasil.',
     titleMuted:

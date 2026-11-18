@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AboutSection from '@/components/home/AboutSection.vue'
 import BookSection from '@/components/home/BookSection.vue'
+import FitSection from '@/components/home/FitSection.vue'
 import HeroSection from '@/components/home/HeroSection.vue'
 import HowSection from '@/components/home/HowSection.vue'
 import ServicesSection from '@/components/home/ServicesSection.vue'
@@ -13,6 +14,7 @@ import WhySection from '@/components/home/WhySection.vue'
     <WhySection />
     <ServicesSection />
     <HowSection />
+    <FitSection />
     <AboutSection />
     <BookSection />
   </main>
