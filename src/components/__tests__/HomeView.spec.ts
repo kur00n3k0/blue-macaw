@@ -12,7 +12,7 @@ describe('HomeView', () => {
 
   it('renders the hero and every section the nav links to', () => {
     const wrapper = mount(HomeView)
-    expect(wrapper.find('h1').text()).toBe('Security platforms, deployed and supported.')
+    expect(wrapper.find('h1').text()).toBe('Your business, protected from beak to talons')
     for (const id of ['why', 'services', 'how', 'fit', 'about', 'book']) {
       expect(wrapper.find(`#${id}`).exists()).toBe(true)
     }
@@ -21,17 +21,17 @@ describe('HomeView', () => {
   it('lists the three services', () => {
     const wrapper = mount(HomeView)
     const titles = wrapper.findAll('#services h3').map((h) => h.text())
-    expect(titles).toEqual(['Solution deployment', 'Configuration and tuning', 'N1 support'])
+    expect(titles).toEqual(['Solution deployment', 'Configuration and tuning', 'Support'])
   })
 
   it('re-renders in the chosen language', async () => {
     const wrapper = mount(HomeView)
     setLocale('pt-BR')
     await nextTick()
-    expect(wrapper.find('h1').text()).toBe('Plataformas de segurança, implantadas e com suporte.')
+    expect(wrapper.find('h1').text()).toBe('Sua empresa protegida, do bico aos pés')
     setLocale('ja')
     await nextTick()
-    expect(wrapper.find('h1').text()).toBe('セキュリティ基盤を、導入から運用支援まで。')
+    expect(wrapper.find('h1').text()).toBe('くちばしから足の先まで、御社をしっかり守ります')
   })
 })
 
