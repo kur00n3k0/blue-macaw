@@ -31,6 +31,7 @@ const columns = computed(() => [
     links: [
       { label: t.value.actions.bookCall, href: site.bookingHref },
       { label: site.email, href: site.emailHref },
+      { label: site.phone, href: site.phoneHref },
     ],
   },
 ])

@@ -2,12 +2,13 @@ import type { Messages } from './en'
 
 const ptBR: Messages = {
   meta: {
-    title: 'Blue Macaw Cybersecurity',
+    title: 'Blue Macaw Security',
     description:
-      'A Blue Macaw Cybersecurity implanta, configura e dá suporte a plataformas de redes seguras e de segurança em nuvem.',
+      'A Blue Macaw Security implanta, configura e dá suporte a plataformas de redes seguras e de segurança em nuvem.',
   },
   site: {
-    location: 'Brasil',
+    location:
+      'SGAS 915, Bloco D, Sala 103, Parte CH 276, Asa Sul, Brasília - DF, 70390-150, Brasil',
   },
   nav: {
     label: 'Principal',
@@ -28,19 +29,30 @@ const ptBR: Messages = {
   },
   hero: {
     announceLabel: 'Serviços',
-    announce: 'Implantação, configuração e suporte N1',
-    title: 'Plataformas de segurança, implantadas e com suporte.',
-    lede: 'Pensado para empresas que operam segurança on-premises e em nuvem. Do projeto à entrada em produção, e o primeiro nível de suporte depois dela.',
+    announce: 'Implantação, configuração e suporte',
+    title: 'Sua empresa protegida, do bico aos pés',
+    lede: 'Pensado para empresas de todos os portes, porque segurança acessível é um direito de todos.',
     stackTitle: 'Plataformas que implantamos e atendemos',
-    platforms: ['Redes seguras', 'Nuvem', 'Gerenciamento centralizado', 'Telemetria'],
+    platforms: [
+      'IAM',
+      'ZTNA',
+      'Cloud',
+      'Gerenciamento centralizado',
+      'Telemetria',
+      'Segurança de endpoint',
+    ],
   },
   why: {
     title: 'Feito certo da primeira vez.',
-    titleMuted: 'Pensado para ser operado pela sua equipe.',
+    titleMuted: 'Pensado para o futuro, com a visão do atacante.',
     reasons: [
       {
         title: 'Configurado contra ataques reais',
         body: 'Nossa engenharia vem da segurança ofensiva, então cada configuração é verificada pensando em como ela seria contornada na prática.',
+      },
+      {
+        title: 'Automação eficiente',
+        body: 'Conte com o poder da IA para automatizar processos e diminuir a carga da sua equipe.',
       },
       {
         title: 'Feito para ser operado',
@@ -125,9 +137,9 @@ const ptBR: Messages = {
     },
     support: {
       tag: 'Contrato mensal',
-      title: 'Suporte N1',
+      title: 'Suporte',
       description:
-        'O primeiro nível de atendimento das suas plataformas de segurança. Recebemos o chamado, resolvemos o que está no escopo e escalamos o restante ao fabricante com tudo o que ele precisa.',
+        'Damos suporte a sua operação de forma contínua, sempre buscando o melhor desenvolvimento e adequação a sua rotina.',
       link: 'Falar sobre suporte',
       items: [
         {
@@ -149,7 +161,7 @@ const ptBR: Messages = {
       ],
       card: {
         title: 'O caminho de um chamado',
-        meta: 'N1',
+        meta: '',
         received: { label: 'Chamado recebido', caption: 'Por e-mail ou pelo seu canal de suporte' },
         triage: { label: 'Triagem', caption: 'Impacto e prioridade definidos' },
         resolved: 'Resolvido pela nossa equipe',
@@ -166,14 +178,17 @@ const ptBR: Messages = {
         title: 'Avaliação',
         body: 'Uma conversa inicial e uma análise do seu ambiente, dos requisitos e da plataforma atual.',
       },
-      { title: 'Proposta', body: 'Um escopo por escrito, com desenho, cronograma e custo.' },
+      {
+        title: 'Proposta',
+        body: 'Um escopo por escrito, com desenho, cronograma e custo que cabem no seu orçamento.',
+      },
       {
         title: 'Implantação e configuração',
         body: 'Implementamos, testamos e fazemos a virada junto com sua equipe e, em seguida, entregamos a documentação.',
       },
       {
-        title: 'Suporte N1',
-        body: 'Suporte contínuo de primeiro nível em contrato mensal, com escalonamento ao fabricante quando necessário.',
+        title: 'Suporte',
+        body: 'Suporte contínuo para manter seu negócio sempre ativo.',
       },
     ],
   },
@@ -197,16 +212,16 @@ const ptBR: Messages = {
     ],
   },
   about: {
-    title: 'A Blue Macaw Cybersecurity é uma empresa de engenharia de segurança sediada no Brasil.',
+    title: 'A Blue Macaw Security é uma empresa de engenharia de segurança sediada no Brasil.',
     titleMuted:
       'Implantamos, configuramos e damos suporte a plataformas corporativas de segurança de rede e nuvem para clientes no Brasil e no exterior.',
     facts: [
-      { term: 'Sede', value: 'Brasil' },
+      { term: 'Sede', value: 'Brasília, Brasil' },
       { term: 'Foco', value: 'Plataformas de segurança de rede e nuvem' },
-      { term: 'Serviços', value: 'Implantação, configuração e suporte N1' },
+      { term: 'Serviços', value: 'Implantação, configuração e suporte' },
       {
         term: 'Certificações da equipe',
-        value: 'Arquitetura de segurança em nuvem certificada pelos fabricantes',
+        value: 'Equipe qualificada e certificada com as melhores práticas do mercado.',
       },
       { term: 'Idiomas', value: 'Inglês, português e japonês' },
     ],

@@ -3,12 +3,13 @@
 
 const en = {
   meta: {
-    title: 'Blue Macaw Cybersecurity',
+    title: 'Blue Macaw Security',
     description:
-      'Blue Macaw Cybersecurity deploys, configures and supports secure networking and cloud security platforms.',
+      'Blue Macaw Security deploys, configures and supports secure networking and cloud security platforms.',
   },
   site: {
-    location: 'Brazil',
+    location:
+      'SGAS 915, Bloco D, Sala 103, Parte CH 276, Asa Sul, Brasília - DF, 70390-150, Brazil',
   },
   nav: {
     label: 'Main',
@@ -29,19 +30,30 @@ const en = {
   },
   hero: {
     announceLabel: 'Services',
-    announce: 'Deployment, configuration and N1 support',
-    title: 'Security platforms, deployed and supported.',
-    lede: 'Purpose-built for companies that run on-premises and cloud security. From design to go-live, and the first line of support after it.',
+    announce: 'Deployment, configuration and support',
+    title: 'Your business, protected from beak to talons',
+    lede: 'Built for companies of every size, because affordable security is everyone’s right.',
     stackTitle: 'Platforms we deploy and support',
-    platforms: ['Secure Networking', 'Cloud', 'Central management', 'Telemetry'],
+    platforms: [
+      'IAM',
+      'ZTNA',
+      'Cloud',
+      'Central management',
+      'Telemetry',
+      'Endpoint security',
+    ],
   },
   why: {
     title: 'Done right the first time.',
-    titleMuted: 'Built to be run by your team.',
+    titleMuted: 'Built for the future, with an attacker’s eye.',
     reasons: [
       {
         title: 'Configured against real attacks',
         body: 'Our engineering comes from offensive security, so every configuration is checked for how it would actually be bypassed.',
+      },
+      {
+        title: 'Efficient automation',
+        body: 'Count on the power of AI to automate processes and lighten your team’s workload.',
       },
       {
         title: 'Built to be operated',
@@ -127,9 +139,9 @@ const en = {
     },
     support: {
       tag: 'Monthly contract',
-      title: 'N1 support',
+      title: 'Support',
       description:
-        'The first line for your security platforms. We take the ticket, solve what is in scope and escalate the rest to the vendor with everything they need.',
+        'We support your operation continuously, always looking for the best improvements and the best fit for your routine.',
       link: 'Talk about support',
       items: [
         {
@@ -151,7 +163,7 @@ const en = {
       ],
       card: {
         title: 'How a request flows',
-        meta: 'N1',
+        meta: '',
         received: { label: 'Request received', caption: 'By email or your support channel' },
         triage: { label: 'Triage', caption: 'Impact and priority set' },
         resolved: 'Resolved by our team',
@@ -168,14 +180,17 @@ const en = {
         title: 'Assessment',
         body: 'A discovery call and a look at your environment, requirements and current platform.',
       },
-      { title: 'Proposal', body: 'A written scope with design, timeline and cost.' },
+      {
+        title: 'Proposal',
+        body: 'A written scope with design, timeline and cost that fit your budget.',
+      },
       {
         title: 'Deployment and configuration',
         body: 'We implement, test and cut over together with your team, then hand over the documentation.',
       },
       {
-        title: 'N1 support',
-        body: 'Ongoing first-line support on a monthly contract, with vendor escalation when needed.',
+        title: 'Support',
+        body: 'Ongoing support to keep your business always up and running.',
       },
     ],
   },
@@ -199,14 +214,17 @@ const en = {
     ],
   },
   about: {
-    title: 'Blue Macaw Cybersecurity is a security engineering company based in Brazil.',
+    title: 'Blue Macaw Security is a security engineering company based in Brazil.',
     titleMuted:
       'We deploy, configure and support enterprise network and cloud security platforms for clients in Brazil and abroad.',
     facts: [
-      { term: 'Headquarters', value: 'Brazil' },
+      { term: 'Headquarters', value: 'Brasília, Brazil' },
       { term: 'Focus', value: 'Network and cloud security platforms' },
-      { term: 'Services', value: 'Deployment, configuration and N1 support' },
-      { term: 'Team certifications', value: 'Vendor-certified cloud security architecture' },
+      { term: 'Services', value: 'Deployment, configuration and support' },
+      {
+        term: 'Team certifications',
+        value: 'A qualified, certified team following industry best practices.',
+      },
       { term: 'Languages', value: 'English, Portuguese, Japanese' },
     ],
   },

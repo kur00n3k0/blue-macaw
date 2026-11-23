@@ -4,9 +4,11 @@
 
 export const site = {
   name: 'Blue Macaw',
-  legalName: 'Blue Macaw Cybersecurity',
+  legalName: 'Blue Macaw Security',
   email: 'contact@bluemacawsec.com',
-  emailHref: 'mailto:',
+  emailHref: 'mailto:contact@bluemacawsec.com',
+  phone: '+55 (61) 99136-0703',
+  phoneHref: 'tel:+5561991360703',
   bookingHref: '#book',
 }
 
